@@ -11,6 +11,8 @@ import App from "./chatbot/App";
 import Market from "./marketPlace/Market";
 import SellStock from "./marketPlace/sellStock";
 import Sellpage from "./marketPlace/Sellpage";
+import Login from "./signup/Login";
+import Signup from "./signup/Signup";
 
 createRoot(document.getElementById("root")).render(
   <StateContextProvider>
@@ -19,10 +21,10 @@ createRoot(document.getElementById("root")).render(
       <GeneralContextProvider>
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* <Route path="/signup" element={<Signup />} /> */}
+          <Route path="/signup" element={<Signup />} />
           <Route path="/weather" element={<DashBoard />} />
           <Route path="/chat" element={<App />} />
-
+          <Route path="/login" element={<Login />} />
           <Route path="/market" element={<Market />} />
           <Route path="/sellStock" element={<SellStock />} />
           <Route path="/transaction" element={<Sellpage />} />

@@ -2,8 +2,14 @@ import React from "react";
 import Order from "./Order";
 import { Link } from "react-router-dom";
 import { useGeneralContext } from "../context/logic";
-
+import Cookies from "js-cookie";
 function Dashboard() {
+  const token = Cookies.get("token");
+  if (token) {
+    console.log("Generated Token " + token);
+  } else {
+    console.log("no token found");
+  }
   const { orders } = useGeneralContext();
   return (
     <div className="container p-5">

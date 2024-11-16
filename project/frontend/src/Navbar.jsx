@@ -5,9 +5,9 @@ function Navbar() {
     <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
       <div class="container p-2">
         <div className="ms-5" style={{ width: "25%" }}>
-          <a class="navbar-brand" href="#">
+          <Link class="navbar-brand" to="/">
             AgriConnect
-          </a>
+          </Link>
         </div>
 
         <button
@@ -41,6 +41,11 @@ function Navbar() {
             <li class="nav-item ">
               <Link class="nav-link active " aria-current="page" to="/chat">
                 chat
+              </Link>
+            </li>
+            <li class="nav-item ">
+              <Link class="nav-link active " aria-current="page" to="/anlayse">
+                Analyse
               </Link>
             </li>
           </ul>
